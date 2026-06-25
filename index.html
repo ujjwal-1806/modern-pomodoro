@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Pomodoro</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="pomodoro-card">
+        <div class="mode-switches">
+          <button class="mode-btn active" data-mode="focus">Focus</button>
+          <button class="mode-btn" data-mode="break">Break</button>
+        </div>
+        
+        <div class="timer-display">
+          <h1 id="time">25:00</h1>
+        </div>
+
+        <div class="controls">
+          <button id="start-btn" class="control-btn primary">Start</button>
+          <button id="pause-btn" class="control-btn hidden">Pause</button>
+          <button id="reset-btn" class="control-btn secondary">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

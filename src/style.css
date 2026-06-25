@@ -1,0 +1,111 @@
+:root {
+  --bg-color: #303446;
+  --card-bg: #414559;
+  --text-main: #c6d0f5;
+  --text-muted: #838ba7;
+  --primary: #8caaee;
+  --primary-hover: #99b5f2;
+  --danger: #e78284;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pomodoro-card {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.mode-switches {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mode-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.mode-btn.active {
+  background-color: rgba(140, 170, 238, 0.15);
+  color: var(--primary);
+}
+
+.timer-display h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  font-variant-numeric: tabular-nums; /* Keeps numbers from shifting */
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.control-btn {
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.control-btn.primary {
+  background-color: var(--primary);
+  color: var(--bg-color);
+}
+
+.control-btn.primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.control-btn.secondary {
+  background-color: transparent;
+  border: 2px solid var(--text-muted);
+  color: var(--text-muted);
+}
+
+.control-btn.secondary:hover {
+  border-color: var(--text-main);
+  color: var(--text-main);
+}
+
+.hidden {
+  display: none;
+}
